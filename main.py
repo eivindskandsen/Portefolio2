@@ -1,23 +1,27 @@
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, render_template
 from flask import jsonify
 
 app = Flask(__name__)
 
-#app= flask.Flask(_name_)
-app.config["DEBUG"]= True
+# app= flask.Flask(_name_)
+app.config["DEBUG"] = True
 
-@app.route('/')
+
+@app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
 
-products= [
+
+products = [
     {
         'id': 0,
         'P_name': "Eple",
         'bilde': "Et bilde"
     }
 ]
-@app.route('/products')
+
+
+@app.route('/products', methods=['GET'])
 def get_drinks():
     return jsonify(products)
 
