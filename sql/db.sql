@@ -6,8 +6,6 @@ CREATE TABLE products (
     id INT NOT NULL AUTO_INCREMENT,
     name varchar(32) NOT NULL,
     price int NOT NULL,
-    summary TINYTEXT() NOT NULL,
-    description TEXT NOT NULL,
     PRIMARYKEY (id)
 )
 
