@@ -21,8 +21,8 @@ my_cursor = my_db.cursor()
 
 my_cursor.execute("select * from products")
 
-@app.route('/', defaults={'path': 'index.html'})
-#def index():
+@app.route('/', defaults={'path': 'Frontend/index.html'})
+
 @app.route('/<path>')
 def page(path):
     print("Request recieved for {}".format(path))
